@@ -32,4 +32,21 @@ describe("the BankAccount object", () => {
       "You have exceeded the deposit limit of 5000. Please deposit a smaller amount."
     );
   });
+
+  it("when making a deposit, returns object containing amount deposited", () => {
+    const bankAccount = new BankAccount();
+    bankAccount.deposit(500);
+    expect(bankAccount.getTransactions()).toEqual(
+      expect.arrayContaining([expect.objectContaining({ debit: 500 })])
+    );
+  });
+
+  it("when making a withdrawl, returns object containing amount withdrawn", () => {
+    const bankAccount = new BankAccount();
+    bankAccount.deposit(500);
+    bankAccount.withdraw(500);
+    expect(bankAccount.getTransactions()).toEqual(
+      expect.arrayContaining([expect.objectContaining({ credit: 500 })])
+    );
+  });
 });
