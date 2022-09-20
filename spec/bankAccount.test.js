@@ -6,7 +6,7 @@ describe("the BankAccount object", () => {
     expect(bankAccount.getBalance()).toBe(0);
   });
 
-  it("depositing an amount of 1000 returns a value of 0", () => {
+  it("depositing an amount of 1000 returns a value of 1000", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(1000);
     expect(bankAccount.getBalance()).toBe(1000);
@@ -19,7 +19,7 @@ describe("the BankAccount object", () => {
     expect(bankAccount.getBalance()).toBe(500);
   });
 
-  it("withdrawing an amount higher than what is in the account throws error message", () => {
+  it("withdrawing an amount greater than what is in the account throws error message", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.withdraw(500)).toBe(
       "You do not have the sufficient funds in your account to support this transaction."
