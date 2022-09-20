@@ -22,7 +22,14 @@ describe("the BankAccount object", () => {
   it("withdrawing an amount higher than what is in the account throws error message", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.withdraw(500)).toBe(
-      "You do not have the sufficient funds in your account to support this transaction"
+      "You do not have the sufficient funds in your account to support this transaction."
+    );
+  });
+
+  it("depositing an amount greater than 5000 throws error message", () => {
+    const bankAccount = new BankAccount();
+    expect(bankAccount.deposit(5001)).toBe(
+      "You have exceeded the deposit limit of 5000. Please deposit a smaller amount."
     );
   });
 });
