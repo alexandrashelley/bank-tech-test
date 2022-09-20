@@ -33,20 +33,20 @@ describe("the BankAccount object", () => {
     );
   });
 
-  it("when making a deposit, returns object containing amount deposited", () => {
+  it("when making a deposit, returns object containing amount deposited and balance", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
     expect(bankAccount.getTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ debit: 500 })])
+      expect.arrayContaining([expect.objectContaining({ balance: 500, debit: 500 })])
     );
   });
 
-  it("when making a withdrawl, returns object containing amount withdrawn", () => {
+  it("when making a withdrawl, returns object containing amount withdrawn and balance", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
     bankAccount.withdraw(500);
     expect(bankAccount.getTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ credit: 500 })])
+      expect.arrayContaining([expect.objectContaining({ balance: 0, credit: 500 })])
     );
   });
 });
