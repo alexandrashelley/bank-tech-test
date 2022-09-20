@@ -37,9 +37,10 @@ I want my bank statement to include the amount of my transactions
 ## Class design
 
 ```
-Class BankAccount {
+class BankAccount {
   constructor() {
     this.balance = 0;
+    transactions = []
   }
 
   deposit(amount) {
@@ -53,30 +54,19 @@ Class BankAccount {
   getBalance() {
     
   }
+
+  print() {
+
+  }
 }
 ```
 ```
-Class BankStatement {
+class Printer {
   constructor() {
-
-  }
-
-  print() {
       
   }
 
-  format() {
-
-  }
-}
-```
-```
-Class Transactions {
-  constructor() {
-    this.history = [];
-  }
-
-  saveTransaction(transaction) {
+  format(transactions) {
 
   }
 }
