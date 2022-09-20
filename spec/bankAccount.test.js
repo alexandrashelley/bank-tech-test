@@ -1,6 +1,10 @@
 const BankAccount = require(".././lib/bankAccount");
 
 describe("the BankAccount object", () => {
+  beforeEach(() => {
+    jest.useFakeTimers().setSystemTime(new Date("2020-01-01"));
+  });
+
   it("getting the balance returns a value of 0", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.getBalance()).toBe(0);
@@ -33,20 +37,34 @@ describe("the BankAccount object", () => {
     );
   });
 
-  it("when making a deposit, returns object containing amount deposited and balance", () => {
+  it("when making a deposit, returns object containing all headers (date, debit, credit, blaance) and values", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
     expect(bankAccount.getTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ balance: 500, debit: 500 })])
+      expect.arrayContaining([
+        expect.objectContaining({
+          date: new Date(),
+          credit: null,
+          debit: 500,
+          balance: 500,
+        }),
+      ])
     );
   });
 
-  it("when making a withdrawl, returns object containing amount withdrawn and balance", () => {
+  it("when making a withdrawl, returns object containing all headers (date, debit, credit, balance) and values", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
     bankAccount.withdraw(500);
     expect(bankAccount.getTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ balance: 0, credit: 500 })])
+      expect.arrayContaining([
+        expect.objectContaining({
+          date: new Date(),
+          credit: 500,
+          debit: null,
+          balance: 0,
+        }),
+      ])
     );
   });
 });
