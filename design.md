@@ -69,4 +69,14 @@ Class bankStatement {
 
   }
 }
+
+Class Transactions {
+  constructor() {
+    this.history = [];
+  }
+
+  saveTransaction(transaction) {
+    
+  }
+}
 ```
