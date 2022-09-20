@@ -11,4 +11,12 @@ describe("the BankAccount object", () => {
     bankAccount.deposit(1000);
     expect(bankAccount.getBalance()).toBe(1000);
   });
+
+  it("depositing 1000 then withdrawing 500 returns a value of 500", () => {
+    const bankAccount = new BankAccount();
+    bankAccount.deposit(1000);
+    bankAccount.withdraw(500);
+    expect(bankAccount.getBalance()).toBe(500);
+  });
+  
 });
