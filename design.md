@@ -26,9 +26,9 @@ I want my bank statement to include the amount of my transactions
 
 ## Edge cases
 
->> A user shouldn't be able to withdraw more than the amount in the account
->> A user can only deposit 5000 at a time
->> The bank statement should print the transaction history with most recent dates first
+* A user shouldn't be able to withdraw more than the amount in the account
+* A user can only deposit 5000 at a time
+* The bank statement should print the transaction history with most recent dates first
 
 ## Extracting nouns and verbs
 
@@ -55,7 +55,8 @@ Class bankAccount {
     
   }
 }
-
+```
+```
 Class bankStatement {
   constructor() {
 
