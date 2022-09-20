@@ -37,7 +37,7 @@ I want my bank statement to include the amount of my transactions
 ## Class design
 
 ```
-Class bankAccount {
+Class BankAccount {
   constructor() {
     this.balance = 0;
   }
@@ -56,7 +56,7 @@ Class bankAccount {
 }
 ```
 ```
-Class bankStatement {
+Class BankStatement {
   constructor() {
 
   }
