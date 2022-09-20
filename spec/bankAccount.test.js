@@ -18,5 +18,11 @@ describe("the BankAccount object", () => {
     bankAccount.withdraw(500);
     expect(bankAccount.getBalance()).toBe(500);
   });
-  
+
+  it("withdrawing an amount higher than what is in the account throws error message", () => {
+    const bankAccount = new BankAccount();
+    expect(bankAccount.withdraw(500)).toBe(
+      "You do not have the sufficient funds in your account to support this transaction"
+    );
+  });
 });
