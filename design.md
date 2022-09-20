@@ -23,8 +23,7 @@ As a user,
 So that I can manage my finances,
 I want my bank statement to include the amount of my transactions
 ```
-
-## Edge cases
+### Edge cases
 
 * A user shouldn't be able to withdraw more than the amount in the account
 * A user can only deposit 5000 at a time
@@ -32,8 +31,8 @@ I want my bank statement to include the amount of my transactions
 
 ## Extracting nouns and verbs
 
-Nouns: bank account, bank statement, transactions
-Verbs: withdraw, deposit, print
+* Nouns: bank account, bank statement, transactions
+* Verbs: withdraw, deposit, print
 
 ## Class design
 
