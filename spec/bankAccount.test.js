@@ -26,7 +26,7 @@ describe("the BankAccount object", () => {
   it("withdrawing an amount greater than what is in the account throws error message", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.withdraw(500)).toBe(
-      "You do not have the sufficient funds in your account to support this transaction."
+      "You do not have sufficient funds in your account to support this transaction."
     );
   });
 
