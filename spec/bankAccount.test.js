@@ -81,5 +81,12 @@ describe("the BankAccount object", () => {
         }),
       ])
     );
-  })
+  });
+
+  it("throws error if user tries to print a bank statement with no prior transactions", () => {
+    const bankAccount = new BankAccount();
+    expect(bankAccount.print()).toBe(
+      "You do not have any transactions in your history"
+    );
+  });
 });
