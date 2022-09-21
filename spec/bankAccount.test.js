@@ -13,14 +13,14 @@ describe("the BankAccount object", () => {
   it("depositing an amount of 1000 returns a value of 1000", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(1000);
-    expect(bankAccount.getBalance()).toBe(1000);
+    expect(bankAccount.balance).toBe(1000);
   });
 
   it("depositing 1000 then withdrawing 500 returns a value of 500", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(1000);
     bankAccount.withdraw(500);
-    expect(bankAccount.getBalance()).toBe(500);
+    expect(bankAccount.balance).toBe(500);
   });
 
   it("withdrawing an amount greater than what is in the account throws error message", () => {
@@ -67,4 +67,19 @@ describe("the BankAccount object", () => {
       ])
     );
   });
+
+  it("prints basic statement/object to terminal", () => {
+    const bankAccount = new BankAccount();
+    bankAccount.deposit(500);
+    expect(bankAccount.print()).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          date: new Date(),
+          credit: null,
+          debit: 500,
+          balance: 500,
+        }),
+      ])
+    );
+  })
 });
