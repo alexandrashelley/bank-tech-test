@@ -7,7 +7,7 @@ describe("the BankAccount object", () => {
 
   it("getting the balance returns a value of 0", () => {
     const bankAccount = new BankAccount();
-    expect(bankAccount.getBalance()).toBe(0);
+    expect(bankAccount.balance).toBe(0);
   });
 
   it("depositing an amount of 1000 returns a value of 1000", () => {
@@ -33,14 +33,14 @@ describe("the BankAccount object", () => {
   it("depositing an amount greater than 5000 throws error message", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.deposit(5001)).toBe(
-      "You have exceeded the deposit limit of 5000. Please deposit a smaller amount."
+      "There is a deposit limit of 5000 per transaction. Please deposit a smaller amount."
     );
   });
 
   it("when making a deposit, returns object containing all headers (date, debit, credit, blaance) and values", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
-    expect(bankAccount.getTransactions()).toEqual(
+    expect(bankAccount.transactions).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           date: new Date(),
@@ -56,7 +56,7 @@ describe("the BankAccount object", () => {
     const bankAccount = new BankAccount();
     bankAccount.deposit(500);
     bankAccount.withdraw(500);
-    expect(bankAccount.getTransactions()).toEqual(
+    expect(bankAccount.transactions).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           date: new Date(),
