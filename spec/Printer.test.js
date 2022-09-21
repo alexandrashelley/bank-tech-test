@@ -28,4 +28,9 @@ describe("the Printer object", () => {
       ])
     );
   });
+
+  it("prints header", () => {
+    const printer = new Printer();
+    expect(printer.printHeader()).toBe("date || credit || debit || balance");
+  });
 });
