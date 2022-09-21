@@ -40,14 +40,14 @@ describe("the Printer object", () => {
         credit: 500,
         debit: null,
         balance: 2000,
-      }
+      },
     ];
     const printer = new Printer(fakeTransactions);
 
     expect(printer.formatStatement()).toContain(
       "date || credit || debit || balance\n",
       "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || || 1000 || 1000",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || 500 || null || 2000",
+      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || 500 || null || 2000"
     );
-  })
+  });
 });
