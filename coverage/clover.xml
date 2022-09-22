@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1663788991899" clover="3.2.0">
-  <project timestamp="1663788991899" name="All files">
+<coverage generated="1663789475164" clover="3.2.0">
+  <project timestamp="1663789475164" name="All files">
     <metrics statements="24" coveredstatements="24" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8" elements="40" coveredelements="40" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
     <file name="Printer.js" path="/Users/alexandrashelley/bank-tech-test/lib/Printer.js">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>

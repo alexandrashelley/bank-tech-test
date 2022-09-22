@@ -1,5 +1,5 @@
 TN:
-SF:Printer.js
+SF:lib/Printer.js
 FN:2,(anonymous_0)
 FN:6,(anonymous_1)
 FN:10,(anonymous_2)
@@ -27,7 +27,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:bankAccount.js
+SF:lib/bankAccount.js
 FN:2,(anonymous_0)
 FN:8,(anonymous_1)
 FN:22,(anonymous_2)
