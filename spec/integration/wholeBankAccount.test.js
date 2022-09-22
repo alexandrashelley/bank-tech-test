@@ -1,5 +1,5 @@
-const BankAccount = require("./../../lib/bankAccount");
-const Printer = require("./../../lib/Printer");
+const BankAccount = require("../../lib/bankAccount");
+const Printer = require("../../lib/Printer");
 
 describe("the whole bank account", () => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-const BankAccount = require(".././lib/bankAccount");
+const BankAccount = require("../lib/bankAccount");
 
 describe("the BankAccount object", () => {
   beforeAll(() => {
