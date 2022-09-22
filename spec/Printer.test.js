@@ -7,7 +7,7 @@ describe("the Printer object", () => {
 
   it("prints empty header", () => {
     const printer = new Printer([]);
-    expect(printer.printHeader()).toBe("date || credit || debit || balance\n");
+    expect(printer.header()).toBe("date || credit || debit || balance\n");
   });
 
   it("prints header and one transaction", () => {
@@ -21,7 +21,7 @@ describe("the Printer object", () => {
     ];
     const printer = new Printer(fakeTransaction);
 
-    expect(printer.formatStatement()).toContain(
+    expect(printer.formatAndPrintStatement()).toContain(
       "date || credit || debit || balance\n",
       "01/01/2020 || || 1000 || 1000"
     );
@@ -44,7 +44,7 @@ describe("the Printer object", () => {
     ];
     const printer = new Printer(fakeTransactions);
 
-    expect(printer.formatStatement()).toContain(
+    expect(printer.formatAndPrintStatement()).toContain(
       "date || credit || debit || balance\n",
       "01/01/2020 || || 1000 || 1000",
       "01/01/2020 || 500 || || 2000"
@@ -68,7 +68,7 @@ describe("the Printer object", () => {
     ];
 
     const printer = new Printer(fakeTransactions);
-    expect(printer.formatStatement()).toContain(
+    expect(printer.formatAndPrintStatement()).toContain(
       "date || credit || debit || balance\n",
       "03/01/2020 || || 500 || 1500",
       "01/01/2020 || || 1000 || 1000"

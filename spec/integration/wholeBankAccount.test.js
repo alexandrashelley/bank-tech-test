@@ -11,11 +11,11 @@ describe("the whole bank account", () => {
     bankAccount.deposit(1000);
 
     const printer = new Printer(bankAccount.transactions);
-    printer.formatStatement();
+    printer.formatAndPrintStatement();
 
     expect(bankAccount.print()).toContain(
       "date || credit || debit || balance\n",
-      "01/01/2020 || || 1000 || 1000"
+      "01/01/2020 || || 1000.00 || 1000.00"
     );
   });
 
@@ -25,12 +25,12 @@ describe("the whole bank account", () => {
     bankAccount.withdraw(500);
 
     const printer = new Printer(bankAccount.transactions);
-    printer.formatStatement();
+    printer.formatAndPrintStatement();
 
     expect(bankAccount.print()).toContain(
-      "date || credit || debit || balance\n",
-      "01/01/2020 || || 1000 || 1000",
-      "01/01/2020 || 500 || || 500"
+      "date || credit || debit || balnce\n",
+      "01/01/2020 || || 1000.00 || 1000.00",
+      "01/01/2020 || 500.00 || || 500.00"
     );
   });
 
@@ -38,7 +38,7 @@ describe("the whole bank account", () => {
     const bankAccount = new BankAccount();
 
     const printer = new Printer(bankAccount.transactions);
-    printer.formatStatement();
+    printer.formatAndPrintStatement();
 
     expect(bankAccount.print()).toBe(
       "You do not have any transactions in your history"
