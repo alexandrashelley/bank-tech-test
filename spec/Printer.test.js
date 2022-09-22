@@ -13,7 +13,7 @@ describe("the Printer object", () => {
   it("prints header and one transaction", () => {
     const fakeTransaction = [
       {
-        date: new Date(),
+        date: new Date().toLocaleDateString("en-UK"),
         credit: null,
         debit: 1000,
         balance: 1000,
@@ -23,20 +23,20 @@ describe("the Printer object", () => {
 
     expect(printer.formatStatement()).toContain(
       "date || credit || debit || balance\n",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || || 1000 || 1000"
+      "01/01/2020 || || 1000 || 1000"
     );
   });
 
   it("prints header and two transactions", () => {
     const fakeTransactions = [
       {
-        date: new Date(),
+        date: new Date().toLocaleDateString("en-UK"),
         credit: null,
         debit: 1000,
         balance: 1000,
       },
       {
-        date: new Date(),
+        date: new Date().toLocaleDateString("en-UK"),
         credit: 500,
         debit: null,
         balance: 2000,
@@ -46,8 +46,8 @@ describe("the Printer object", () => {
 
     expect(printer.formatStatement()).toContain(
       "date || credit || debit || balance\n",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || || 1000 || 1000",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || 500 || null || 2000"
+      "01/01/2020 || || 1000 || 1000",
+      "01/01/2020 || 500 || null || 2000"
     );
   });
 });

@@ -1,7 +1,7 @@
 const BankAccount = require(".././lib/bankAccount");
 
 describe("the BankAccount object", () => {
-  beforeEach(() => {
+  beforeAll(() => {
     jest.useFakeTimers().setSystemTime(new Date("2020-01-01"));
   });
 
@@ -43,7 +43,7 @@ describe("the BankAccount object", () => {
     expect(bankAccount.transactions).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          date: new Date(),
+          date: new Date().toLocaleDateString("en-UK"),
           credit: null,
           debit: 500,
           balance: 500,
@@ -59,7 +59,7 @@ describe("the BankAccount object", () => {
     expect(bankAccount.transactions).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          date: new Date(),
+          date: new Date().toLocaleDateString('en-UK'),
           credit: 500,
           debit: null,
           balance: 0,

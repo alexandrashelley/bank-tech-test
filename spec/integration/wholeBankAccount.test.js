@@ -15,7 +15,7 @@ describe("the whole bank account", () => {
 
     expect(bankAccount.print()).toContain(
       "date || credit || debit || balance\n",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || || 1000 || 1000"
+      "01/01/2020 || || 1000 || 1000"
     );
   });
 
@@ -29,8 +29,8 @@ describe("the whole bank account", () => {
 
     expect(bankAccount.print()).toContain(
       "date || credit || debit || balance\n",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || || 1000 || 1000",
-      "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || 500 || || 500"
+      "01/01/2020 || || 1000 || 1000",
+      "01/01/2020 || 500 || || 500"
     );
   });
 
