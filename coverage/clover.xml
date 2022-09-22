@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1663789475164" clover="3.2.0">
-  <project timestamp="1663789475164" name="All files">
-    <metrics statements="24" coveredstatements="24" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8" elements="40" coveredelements="40" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+<coverage generated="1663850453526" clover="3.2.0">
+  <project timestamp="1663850453526" name="All files">
+    <metrics statements="27" coveredstatements="27" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8" elements="43" coveredelements="43" complexity="0" loc="27" ncloc="27" packages="1" files="2" classes="2"/>
     <file name="Printer.js" path="/Users/alexandrashelley/bank-tech-test/lib/Printer.js">
-      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="7" count="3" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
-      <line num="25" count="1" type="stmt"/>
+      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="5" count="11" type="stmt"/>
+      <line num="9" count="9" type="stmt"/>
+      <line num="13" count="8" type="stmt"/>
+      <line num="14" count="8" type="stmt"/>
+      <line num="15" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="18" count="8" type="stmt"/>
+      <line num="21" count="8" type="stmt"/>
+      <line num="25" count="3" type="stmt"/>
     </file>
     <file name="bankAccount.js" path="/Users/alexandrashelley/bank-tech-test/lib/bankAccount.js">
-      <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
-      <line num="3" count="9" type="stmt"/>
-      <line num="4" count="9" type="stmt"/>
-      <line num="5" count="9" type="stmt"/>
-      <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="10" count="5" type="stmt"/>
-      <line num="11" count="5" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="23" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="24" count="2" type="stmt"/>
-      <line num="25" count="2" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="37" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="38" count="1" type="stmt"/>
-      <line num="40" count="1" type="stmt"/>
-      <line num="45" count="1" type="stmt"/>
+      <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="5" count="11" type="stmt"/>
+      <line num="6" count="11" type="stmt"/>
+      <line num="7" count="11" type="stmt"/>
+      <line num="11" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="6" type="stmt"/>
+      <line num="13" count="6" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="3" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="40" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="43" count="2" type="stmt"/>
+      <line num="48" count="3" type="stmt"/>
     </file>
   </project>
 </coverage>

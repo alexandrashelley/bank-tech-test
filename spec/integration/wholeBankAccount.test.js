@@ -28,7 +28,7 @@ describe("the whole bank account", () => {
     printer.formatAndPrintStatement();
 
     expect(bankAccount.print()).toContain(
-      "date || credit || debit || balnce\n",
+      "date || credit || debit || balance\n",
       "01/01/2020 || || 1000.00 || 1000.00",
       "01/01/2020 || 500.00 || || 500.00"
     );
