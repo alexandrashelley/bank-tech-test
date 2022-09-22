@@ -33,4 +33,15 @@ describe("the whole bank account", () => {
       "Wed Jan 01 2020 00:00:00 GMT+0000 (Greenwich Mean Time) || 500 || || 500"
     );
   });
+
+  it("calling the print method from the bank account class with no transactions in history throws error", () => {
+    const bankAccount = new BankAccount();
+
+    const printer = new Printer(bankAccount.transactions);
+    printer.formatStatement();
+
+    expect(bankAccount.print()).toBe(
+      "You do not have any transactions in your history"
+    );
+  });
 });
