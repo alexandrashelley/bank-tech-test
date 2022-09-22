@@ -71,3 +71,5 @@ class Printer {
   }
 }
 ```
+
+![alt text](img/class_flow.png)
