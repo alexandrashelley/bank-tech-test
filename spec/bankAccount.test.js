@@ -68,21 +68,6 @@ describe("the BankAccount object", () => {
     );
   });
 
-  it("prints basic statement/object to terminal", () => {
-    const bankAccount = new BankAccount();
-    bankAccount.deposit(500);
-    expect(bankAccount.print()).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          date: new Date(),
-          credit: null,
-          debit: 500,
-          balance: 500,
-        }),
-      ])
-    );
-  });
-
   it("throws error if user tries to print a bank statement with no prior transactions", () => {
     const bankAccount = new BankAccount();
     expect(bankAccount.print()).toBe(
