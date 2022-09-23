@@ -1,6 +1,6 @@
-node_modules/
-coverage/
-img/
+/node_modules/
+/coverage/
+/img/
 
 package-lock.json
 package.json
